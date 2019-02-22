@@ -2,11 +2,13 @@
 
 namespace classes\abstratas;
 
-class Funcionario{
+abstract class Funcionario{
 
   public $nome;
 
   public $cpf;
+
+  
 
   protected $salario;
 
@@ -15,6 +17,10 @@ class Funcionario{
     $this->cpf = $cpf;
     $this->salario = $salario;
   }
+
+  abstract public function getBonificacao();
+
+  abstract public function aumentarSalario();
 
 }
 ?>
